@@ -1,7 +1,9 @@
 package com.aditya.wasnik.mvvm_example.view
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.Observer
 import com.aditya.wasnik.mvvm_example.databinding.ActivityMainBinding
@@ -12,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     val model: CityViewModel by viewModels()
     private lateinit var binding: ActivityMainBinding
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
       binding = ActivityMainBinding.inflate(layoutInflater)
